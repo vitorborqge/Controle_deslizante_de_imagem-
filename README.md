@@ -1,6 +1,6 @@
 # Controle_deslizante_de_imagem
 
-Um site com um Controle deslizante de imagem.
+Um site com um controle deslizante de imagem.
 
 Mais informações sobre o site:
 
