@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <title>Controle deslizante de imagem - com botões de reprodução automática e navegação manual</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+    <!--início do controle deslizante de imagem-->
+    <div class="slider">
+      <div class="slides">
+        <!--inicio input button radio-->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <input type="radio" name="radio-btn" id="radio4">
+        <!--final input button radio-->
+        <!--as imagens do slide começam-->
+        <div class="slide first">
+          <img src="1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="3.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="4.jpg" alt="">
+        </div>
+        <!--as imagens do slide terminam-->
+        <!--início de navegação automática-->
+        <div class="navigation-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+          <div class="auto-btn4"></div>
+        </div>
+        <!--final de navegação automática-->
+      </div>
+      <!--início de navegação manual-->
+      <div class="navigation-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+        <label for="radio4" class="manual-btn"></label>
+      </div>
+      <!--fim de navegação manual-->
+    </div>
+    <!--final do controle deslizante de imagem-->
+
+    <script type="text/javascript">
+    var counter = 1;
+    setInterval(function(){ // função que analisa se todos os inputs radios estao checados 
+      document.getElementById('radio' + counter).checked = true;
+      counter++;
+      if(counter > 4){
+        counter = 1;
+      }
+    }, 5000);
+    </script>
+
+  </body>
+</html>
